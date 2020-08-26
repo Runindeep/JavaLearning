@@ -54,7 +54,7 @@ public class Quickstart {
                 log.info("There is no user with username of " + token.getPrincipal());
             } catch (IncorrectCredentialsException ice) { // 密码不正确
                 log.info("Password for account " + token.getPrincipal() + " was incorrect!");
-            } catch (LockedAccountException lae) { // 账户锁定
+            } catch (LockedAccountException lae) { // 账户已锁定
                 log.info("The account for username " + token.getPrincipal() + " is locked.  " +
                         "Please contact your administrator to unlock it.");
             } catch (AuthenticationException ae) { // 其他异常：可根据需要自定义
